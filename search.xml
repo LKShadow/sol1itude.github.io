@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+    
+    <entry>
+      <title><![CDATA[test]]></title>
+      <url>/2017/06/01/test/</url>
+      <content type="html"><![CDATA[<p>tHub Wikis is a simple way to let others contribute content. Any GitHub user can create and edit pages to use for documentation, examples, support, or anything you wish.<br>Restrict editing to collaborators only<br>Public wikis will still be readable by everyone.<br>Issues<br>GitHub Issues adds lightweight issue tracking tightly integrated with your repository. Add issues to milestones, label issues, and close &amp; reference issues from commit messages.<br>Projects<br>Project boards on GitHub help you organize and prioritize your work. You can create project boards for specific feature work, comprehensive roadmaps, or even release checklists.<br>Merge button<br>When merging pull requests, you can allow any combination of merge commits, squashing, or rebasing. At least one option must be enabled.</p>
+<p>Allow merge commits<br>Add all commits from the head branch to the base branch with a merge commit.<br>Allow squash merging<br>Combine all commits from the head branch into a single commit in the base branch.<br>Allow rebase merging<br>Add all commits from the head branch onto the base branch individually.<br>Temporary interaction limits<br>Temporarily restrict which users can interact with your repository (comment, open issues, or create pull requests) for a 24-hour period. This may be used to force a “cool-down” period during heated discussions.</p>
+<p>Limit to existing users<br>Users that have recently created their account will be unable to interact with the repository.<br>Limit to prior contributors<br>Users that have not previously committed to the repository’s master branch will be unable to interact with the repository.<br>Limit to repository collaborators<br>Users that have not been granted push access will be unable to interact with the repository.<br>GitHub Pages<br>Your site is ready to be published at <a href="https://wfj0527.github.io/krystal.github.io/" target="_blank" rel="external">https://wfj0527.github.io/krystal.github.io/</a>.<br>GitHub Pages is designed to host your personal, organization, or project pages from a GitHub repository.</p>
+<p>Source<br>Your GitHub Pages site is currently being built from the master branch. Learn more.<br> master branch   Save</p>
+]]></content>
+      
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Hello World]]></title>
+      <url>/2017/06/01/hello-world/</url>
+      <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+]]></content>
+      
+        
+    </entry>
+    
+  
+  
+</search>
