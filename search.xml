@@ -3,6 +3,14 @@
   
     
     <entry>
+      <title><![CDATA[工作总结]]></title>
+      <url>/2017/06/08/%E5%B7%A5%E4%BD%9C%E6%80%BB%E7%BB%93/</url>
+      <content type="html"><![CDATA[<h2 id="最近的工作总结"><a href="#最近的工作总结" class="headerlink" title="最近的工作总结"></a>最近的工作总结</h2>]]></content>
+      
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[test]]></title>
       <url>/2017/06/01/test/</url>
       <content type="html"><![CDATA[<p>tHub Wikis is a simple way to let others contribute content. Any GitHub user can create and edit pages to use for documentation, examples, support, or anything you wish.<br>Restrict editing to collaborators only<br>Public wikis will still be readable by everyone.<br>Issues<br>GitHub Issues adds lightweight issue tracking tightly integrated with your repository. Add issues to milestones, label issues, and close &amp; reference issues from commit messages.<br>Projects<br>Project boards on GitHub help you organize and prioritize your work. You can create project boards for specific feature work, comprehensive roadmaps, or even release checklists.<br>Merge button<br>When merging pull requests, you can allow any combination of merge commits, squashing, or rebasing. At least one option must be enabled.</p>
