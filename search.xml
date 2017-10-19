@@ -5,7 +5,17 @@
     <entry>
       <title><![CDATA[工作总结]]></title>
       <url>/2017/06/08/%E5%B7%A5%E4%BD%9C%E6%80%BB%E7%BB%93/</url>
-      <content type="html"><![CDATA[<h2 id="最近的工作总结"><a href="#最近的工作总结" class="headerlink" title="最近的工作总结"></a>最近的工作总结</h2>]]></content>
+      <content type="html"><![CDATA[<h2 id="使用jquery修改css中带有-important的样式属性"><a href="#使用jquery修改css中带有-important的样式属性" class="headerlink" title="使用jquery修改css中带有!important的样式属性"></a>使用jquery修改css中带有!important的样式属性</h2><blockquote>
+<p>如何使用jquery修改css中带有!important的样式属性？</p>
+</blockquote>
+<p>外部样式</p>
+<figure class="highlight plain"><figcaption><span>html></span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">div.test&#123;</div><div class="line">  width:100px;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>通过$(‘.test’).css(‘width’, ‘100px !important’)或者$(‘.test’).css({‘width’: ‘100px !important’})修改是无效的。</p>
+<font color="red">要想修改div.test的width需要用下面的分方式实现</font>
+
+<p>$(“div.test”).css(“cssText”, “width:650px !important;”);<br>要想修改多个属性，可以这么做：<br>$(“div.test”).css(“cssText”, “width:650px !important;overflow:hidden !important”);</p>
+<p>好了，就这样了，之前没遇见过这个问题的可以参考一下。</p>
+]]></content>
       
         
     </entry>
@@ -84,7 +94,7 @@
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">$.ajax(&#123;</div><div class="line">  <span class="attr">url</span>: <span class="string">'http://www.b.com/getdata?callback=?'</span>, <span class="comment">//不指定回调名，可省略callback参数，会由jQuery自动生成</span></div><div class="line">  dataType: <span class="string">'jsonp'</span>,</div><div class="line">  <span class="attr">jsonpCallback</span>: <span class="string">'demo'</span>, <span class="comment">//可省略</span></div><div class="line">  success: <span class="function"><span class="keyword">function</span>(<span class="params">data</span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(data.msg);</div><div class="line">  &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
 <p>虽然JSONP在跨域ajax请求方面有很强的能力，但是它也有一些缺陷。首先，它没有关于JSONP调用的错误处理，一旦回调函数调用失败，浏览器会以静默失败的方式处理。其次，它只支持GET请求，这是由于该技术本身的特性所决定的。因此，对于一些需要对安全性有要求的跨域请求，JSONP的使用需要谨慎一点了。</p>
 <p>由于JSONP对于老浏览器兼容性方面比较良好，因此，对于那些对IE8以下仍然需要支持的网站来说，仍然被广泛应用。不过，针对高级浏览器，建议还是使用接下来会介绍的CORS方法。</p>
-]]></content>
+<h2 id="CORS解决跨域"><a href="#CORS解决跨域" class="headerlink" title="CORS解决跨域"></a>CORS解决跨域</h2>]]></content>
       
         
     </entry>

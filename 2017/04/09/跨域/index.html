@@ -26,7 +26,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/04/09/跨域/index.html">
 <meta property="og:site_name" content="Blog">
 <meta property="og:description" content="那些年，那些跨域浏览器在请求不同域的资源时，会因为同源策略的影响请求不成功，这就是通常被提到的“跨域问题”。作为前端开发，解决跨域问题应该是一个被熟练掌握的技能。而随着技术不断的更迭，针对跨域问题的解决也衍生出了多种解决方案。我们通常会根据项目的不同需要，而采取不同的方式。这篇文章，将详细总结跨域问题的相关知识点，以便在遇到相同问题的时候，能有一个清晰的解决思路。 跨域问题产生的背景早期为了防止C">
-<meta property="og:updated_time" content="2017-04-11T12:11:56.177Z">
+<meta property="og:updated_time" content="2017-09-30T06:32:18.409Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="聊一聊跨域">
 <meta name="twitter:description" content="那些年，那些跨域浏览器在请求不同域的资源时，会因为同源策略的影响请求不成功，这就是通常被提到的“跨域问题”。作为前端开发，解决跨域问题应该是一个被熟练掌握的技能。而随着技术不断的更迭，针对跨域问题的解决也衍生出了多种解决方案。我们通常会根据项目的不同需要，而采取不同的方式。这篇文章，将详细总结跨域问题的相关知识点，以便在遇到相同问题的时候，能有一个清晰的解决思路。 跨域问题产生的背景早期为了防止C">
@@ -117,7 +117,7 @@
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
                 <i class="icon icon-lg icon-chevron-left"></i>
             </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
                 <i class="icon icon-lg icon-search"></i>
             </a>
@@ -156,7 +156,7 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#那些年，那些跨域"><span class="post-toc-number">1.</span> <span class="post-toc-text">那些年，那些跨域</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#跨域问题产生的背景"><span class="post-toc-number">2.</span> <span class="post-toc-text">跨域问题产生的背景</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#JS跨域"><span class="post-toc-number">3.</span> <span class="post-toc-text">JS跨域</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#JSONP"><span class="post-toc-number">4.</span> <span class="post-toc-text">JSONP</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#那些年，那些跨域"><span class="post-toc-number">1.</span> <span class="post-toc-text">那些年，那些跨域</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#跨域问题产生的背景"><span class="post-toc-number">2.</span> <span class="post-toc-text">跨域问题产生的背景</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#JS跨域"><span class="post-toc-number">3.</span> <span class="post-toc-text">JS跨域</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#JSONP"><span class="post-toc-number">4.</span> <span class="post-toc-text">JSONP</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#CORS解决跨域"><span class="post-toc-number">5.</span> <span class="post-toc-text">CORS解决跨域</span></a></li></ol>
         </nav>
     </aside>
     
@@ -205,14 +205,14 @@
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">$.ajax(&#123;</div><div class="line">  <span class="attr">url</span>: <span class="string">'http://www.b.com/getdata?callback=?'</span>, <span class="comment">//不指定回调名，可省略callback参数，会由jQuery自动生成</span></div><div class="line">  dataType: <span class="string">'jsonp'</span>,</div><div class="line">  <span class="attr">jsonpCallback</span>: <span class="string">'demo'</span>, <span class="comment">//可省略</span></div><div class="line">  success: <span class="function"><span class="keyword">function</span>(<span class="params">data</span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(data.msg);</div><div class="line">  &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
 <p>虽然JSONP在跨域ajax请求方面有很强的能力，但是它也有一些缺陷。首先，它没有关于JSONP调用的错误处理，一旦回调函数调用失败，浏览器会以静默失败的方式处理。其次，它只支持GET请求，这是由于该技术本身的特性所决定的。因此，对于一些需要对安全性有要求的跨域请求，JSONP的使用需要谨慎一点了。</p>
 <p>由于JSONP对于老浏览器兼容性方面比较良好，因此，对于那些对IE8以下仍然需要支持的网站来说，仍然被广泛应用。不过，针对高级浏览器，建议还是使用接下来会介绍的CORS方法。</p>
-
+<h2 id="CORS解决跨域"><a href="#CORS解决跨域" class="headerlink" title="CORS解决跨域"></a>CORS解决跨域</h2>
         </div>
 
         <blockquote class="post-copyright">
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2017-04-11T12:11:56.177Z" itemprop="dateUpdated">2017-04-11 20:11:56</time>
+    最后更新时间：<time datetime="2017-09-30T06:32:18.409Z" itemprop="dateUpdated">2017-09-30 14:32:18</time>
 </span><br>
 
 
@@ -360,7 +360,7 @@
 
         <p>
             
-            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+            <span>博客内容遵循<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
         </p>
     </div>
     <div class="bottom">
