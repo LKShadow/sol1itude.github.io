@@ -5,9 +5,18 @@
     <entry>
       <title><![CDATA[工作中遇到的一些问题]]></title>
       <url>/2018/03/06/%E5%B7%A5%E4%BD%9C%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/</url>
-      <content type="html"><![CDATA[<h2 id="记录工作中遇到的一些问题"><a href="#记录工作中遇到的一些问题" class="headerlink" title="记录工作中遇到的一些问题"></a>记录工作中遇到的一些问题</h2><blockquote>
+      <content type="html"><![CDATA[<h2 id="1-记录工作中遇到的一些问题"><a href="#1-记录工作中遇到的一些问题" class="headerlink" title="1.记录工作中遇到的一些问题"></a>1.记录工作中遇到的一些问题</h2><blockquote>
 <p>iOS Safari 中click点击事件失效的解决办法,当使用委托给一个元素添加click事件时，如果事件是委托到 document 或 body 上，并且委托的元素是默认不可点击的（如 div, span 等），此时 click 事件会失效。</p>
 </blockquote>
+<h2 id="2-H5与APP混合开发遇到的问题总结"><a href="#2-H5与APP混合开发遇到的问题总结" class="headerlink" title="2.H5与APP混合开发遇到的问题总结"></a>2.H5与APP混合开发遇到的问题总结</h2><h3 id="1-ios中日期显示为NaN"><a href="#1-ios中日期显示为NaN" class="headerlink" title="1.ios中日期显示为NaN"></a>1.ios中日期显示为NaN</h3><p>问题描述</p>
+<blockquote>
+<p>Date的日期格式，在ios中有兼容性问题，ios的日期会显示成：NaN</p>
+</blockquote>
+<p>解决方法</p>
+<blockquote>
+<p>在ios中支持”2018/03/06 12:36:00”，而不支持”2018-03-06 12:36:00”格式，后面一种格式，在ios中显示Nan （Android中都可以显示正常）</p>
+</blockquote>
+<p>代码<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> time = <span class="string">"2017-03-06 12:36:00"</span>;</div><div class="line">time = time.replace(<span class="regexp">/\-/g</span>, <span class="string">"/"</span>);<span class="comment">//将时间格式的'-'转成'/'形式，兼容iOS</span></div></pre></td></tr></table></figure></p>
 ]]></content>
       
         
