@@ -112,7 +112,7 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="面试总结">
 <meta property="og:url" content="http://yoursite.com/2017/04/18/面试总结/index.html">
-<meta property="og:site_name" content="Blog">
+<meta property="og:site_name" content="博客">
 <meta property="og:description" content="你如何理解HTML结构的语意化? 1、去掉或样式丢失的时候能让页面呈现清晰的结构。 2、屏幕阅读器（如果访客有视障）会完全根据你的标记来”读”你的网页。 3、PDA、手机等设备可能无法像普通电脑的浏览器一样来渲染网页（通常是因为这些设备对CSS的支持较弱）。 4、搜索引擎的爬虫也依赖于标记来确定上下文和各个关键字的权重。 5、你的页面是否对爬虫容易理解非常重要,因为爬虫很大程度上会忽略用于表现的标">
 <meta property="og:updated_time" content="2017-04-18T03:07:57.624Z">
 <meta name="twitter:card" content="summary">
@@ -134,7 +134,7 @@
   };
 </script>
 
-  <title>面试总结 | Blog</title>
+  <title>面试总结 | 博客</title>
   
 
 
@@ -192,7 +192,7 @@
     <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Blog</span>
+        <span class="site-title">博客</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -288,7 +288,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Blog">
+      <meta itemprop="name" content="博客">
     </span>
 
     
@@ -690,9 +690,23 @@
   <script type="text/javascript" src="/js/src/bootstrap.js?v=6.3.0"></script>
 
 
-
-<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
-
+  
+  <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+  
+  
+    <script type="text/javascript" src="/live2d/script.js"></script>
+    <canvas id="live2dcanvas" width="150" height="300" class="live2d"></canvas>
+    <style>
+      #live2dcanvas {
+        position: fixed;
+        right: 0px;
+        z-index: 999;
+        pointer-events: none;
+        bottom: -20px;
+      }
+    </style>
+    <script>loadlive2d("live2dcanvas" ,"/live2d/assets/wanko/wanko.model.json")</script>
+  
   
 
 
